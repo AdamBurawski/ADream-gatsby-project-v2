@@ -1,21 +1,21 @@
 // import * as React from "react"
-import { Link } from "gatsby"
-import { graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import Navigation from "../components/Navigation/Navigation"
-import Nav2 from "../components/Navigation/Nav2"
-import Image from "gatsby-image"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import Gallery from "../components/gallery"
-import BgCarousel from "../components/bgCarousel"
+import { Link } from "gatsby";
+import { graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import Navigation from "../components/Navigation/Navigation";
+import Nav2 from "../components/Navigation/Nav2";
+import Image from "gatsby-image";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Gallery from "../components/gallery";
+import BgCarousel from "../components/bgCarousel";
 
 const IndexPage = ({ data }) => (
   <Layout>
     <div className="contentWrapper">
-      <h1>Firma test</h1>
+      <h1>Firma test2</h1>
       <h2>
         Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,<br></br>{" "}
         consectetur adipiscing elit. Ut auctor
@@ -211,7 +211,7 @@ const IndexPage = ({ data }) => (
       </ul>
     </section>
   </Layout>
-)
+);
 
 // export const query = graphql`
 //   query Myquery {
@@ -226,4 +226,4 @@ const IndexPage = ({ data }) => (
 //   }
 // `
 
-export default IndexPage
+export default IndexPage;
