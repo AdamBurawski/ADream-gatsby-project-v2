@@ -15,7 +15,7 @@ import BgCarousel from "../components/bgCarousel"
 const IndexPage = ({ data }) => (
   <Layout>
     <div className="contentWrapper">
-      <h1>Firma</h1>
+      <h1>Firma test</h1>
       <h2>
         Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,<br></br>{" "}
         consectetur adipiscing elit. Ut auctor
