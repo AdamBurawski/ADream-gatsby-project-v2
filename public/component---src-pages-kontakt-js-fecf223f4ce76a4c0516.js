@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[628],{7395:function(e,t,l){l.r(t);var a=l(7294),n=l(5592),r=l(262);t.default=function(){return a.createElement(n.Z,null,a.createElement(r.Z,{title:"Kontakt"}),a.createElement("h1",null,"Kontakt"),a.createElement("p",null,"Welcome to my blog :-)) "))}}}]);
-//# sourceMappingURL=component---src-pages-kontakt-js-fecf223f4ce76a4c0516.js.map

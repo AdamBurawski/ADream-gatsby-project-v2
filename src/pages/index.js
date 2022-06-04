@@ -11,6 +11,46 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Gallery from "../components/gallery";
 import BgCarousel from "../components/bgCarousel";
+import ArticlePreview from "../components/ArticlePreview";
+import PageInfo from "../components/PageInfo";
+import styled from "styled-components";
+// import ArticlesPage from "../pages/articles";
+
+const ArticlesWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  overflow: auto;
+  white-space: nowrap;
+  width: 100%;
+`;
+
+const pageData = {
+  title: "articles",
+  paragraph: `While artists work from real to the abstract, architects must work from the abstract to the real.`,
+};
+
+export const query = graphql`
+  {
+    allMdx {
+      nodes {
+        frontmatter {
+          title
+          slug
+          author
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 700, maxHeight: 500) {
+                src
+              }
+            }
+          }
+        }
+        excerpt(pruneLength: 50)
+      }
+    }
+  }
+`;
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -174,6 +214,24 @@ const IndexPage = ({ data }) => (
           <button>Więcej</button>
         </div>
       </div>
+      <>
+        <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
+        <ArticlesWrapper>
+          {data.allMdx.nodes.map(
+            ({
+              excerpt,
+              frontmatter: { title, slug, author, featuredImage },
+            }) => (
+              <ArticlePreview
+                title={title}
+                excerpt={excerpt}
+                image={featuredImage.childImageSharp.fluid}
+                slug={slug}
+              />
+            )
+          )}
+        </ArticlesWrapper>
+      </>
     </section>
     <section className="gallery">
       <div className="wrapper">

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[735],{2871:function(e,t,a){a.r(t);var l=a(7294),n=a(5592),r=a(262);t.default=function(){return l.createElement(n.Z,null,l.createElement(r.Z,{title:"Lokalizacja"}),l.createElement("h1",null,"Lokalizacja"),l.createElement("p",null,"Welcome to my blog :-)) "))}}}]);
-//# sourceMappingURL=component---src-pages-lokalizacja-js-e10687d89825a1713c05.js.map

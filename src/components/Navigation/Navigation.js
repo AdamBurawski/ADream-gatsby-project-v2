@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
 
 // const MenuLinks = styled.nav`
 //   ul {
@@ -10,15 +10,15 @@ import styled from "styled-components"
 // transform: ${({ ul }) => (ul ? "translateX(0%)" : "translateX(100%)")};
 class MenuMobile extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { showMenu: false }
-    this.handleClick = this.handleClick.bind(this)
+    super(props);
+    this.state = { showMenu: false };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       showMenu: !prevState.showMenu,
-    }))
+    }));
   }
   render() {
     const navigation = (
@@ -31,7 +31,7 @@ class MenuMobile extends React.Component {
             <Link to="/oferta">Oferta</Link>
           </li>
           <li>
-            <Link to="/lokalizacja">Lokalizacja</Link>
+            <Link to="/articles">Aktualności</Link>
           </li>
           <li className="wlasneBiuro">
             <Link to="/wlasne-biuro">Własne biuro</Link>
@@ -41,7 +41,7 @@ class MenuMobile extends React.Component {
           </li>
         </ul>
       </nav>
-    )
+    );
     return (
       <nav className="navStyles">
         <span className="logo">
@@ -57,8 +57,8 @@ class MenuMobile extends React.Component {
           ? (navigation = { style: transStart })
           : (navigation = { style: transEnd })} */}
       </nav>
-    )
+    );
   }
 }
 
-export default MenuMobile
+export default MenuMobile;

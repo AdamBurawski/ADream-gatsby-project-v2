@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
 const Nav2 = () => (
   <nav className="navStyles2">
@@ -14,7 +14,7 @@ const Nav2 = () => (
         <Link to="/oferta">Oferta</Link>
       </li>
       <li>
-        <Link to="/lokalizacja">Lokalizacja</Link>
+        <Link to="/articles">Aktualności</Link>
       </li>
       <li className="wlasneBiuro">
         <Link to="/wlasne-biuro">Własne biuro</Link>
@@ -24,6 +24,6 @@ const Nav2 = () => (
       </li>
     </ul>
   </nav>
-)
+);
 
-export default Nav2
+export default Nav2;

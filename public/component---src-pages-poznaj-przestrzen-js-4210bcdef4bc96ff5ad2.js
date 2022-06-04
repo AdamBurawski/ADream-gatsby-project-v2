@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[286],{328:function(e,t,l){l.r(t);var r=l(7294),a=l(5592),n=l(262);t.default=function(){return r.createElement(a.Z,null,r.createElement(n.Z,{title:"{Poznaj przestrzen}"}),r.createElement("h1",null,"Twoja przestrzeń"),r.createElement("p",null,"Welcome to my blog :-)) "))}}}]);
-//# sourceMappingURL=component---src-pages-poznaj-przestrzen-js-4210bcdef4bc96ff5ad2.js.map
