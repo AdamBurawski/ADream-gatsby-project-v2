@@ -4,13 +4,11 @@ import Image from "gatsby-image";
 import { Link } from "gatsby";
 
 const PreviewWrapper = styled(Link)`
-  display: block;
+  display: black;
   position: relative;
-  width: 25vw;
-  height: 20vw;
+  width: 100%;
+  height: 340px;
   background-color: hsl(0, 0%, 95%);
-  background-image: url(${({ background }) => background});
-  background-size: cover;
 `;
 
 const PreviewInfoLabel = styled.div`
@@ -31,17 +29,16 @@ const PreviewInfoLabel = styled.div`
 const StyledImage = styled(Image)`
   width: 100%;
   height: 100%;
-  object-git: cover;
+  object-fit: cover;
 `;
 
-const Preview = ({ title, excerpt, image, slug }) => (
+const ArticlePreview = ({ title, excerpt, image, slug }) => (
   <PreviewWrapper to={`/articles/${slug}`}>
     <StyledImage fluid={image} />
     <PreviewInfoLabel>
       <h2>{title}</h2>
-      <p>{excerpt}</p>
     </PreviewInfoLabel>
   </PreviewWrapper>
 );
 
-export default Preview;
+export default ArticlePreview;

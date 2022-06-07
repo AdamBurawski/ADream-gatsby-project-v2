@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { graphql } from "gatsby";
 import ArticlePreview from "../components/ArticlePreview";
 import PageInfo from "../components/PageInfo";
+import slugify from "slugify";
 
 const ArticlesWrapper = styled.div`
   display: grid;
@@ -15,43 +16,37 @@ const pageData = {
   paragraph: `While artists work from real to the abstract, architects must work from the abstract to the real.`,
 };
 
-const ArticlesPage = ({ data }) => (
-  <>
-    <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
-    <ArticlesWrapper>
-      {data.allMdx.nodes.map(
-        ({ excerpt, frontmatter: { title, slug, author, featuredImage } }) => (
+const ArticlesPage = ({ data }) => {
+  const {
+    allDatoCmsArticle: { nodes },
+  } = data;
+  return (
+    <>
+      <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
+      <ArticlesWrapper>
+        {nodes.map(({ title, featuredImage }) => (
           <ArticlePreview
-            key={slug}
+            key={title}
             title={title}
-            excerpt={excerpt}
-            image={featuredImage.childImageSharp.fluid}
-            slug={slug}
+            image={featuredImage.fluid}
+            slug={slugify(title, { lower: true })}
           />
-        )
-      )}
-    </ArticlesWrapper>
-  </>
-);
+        ))}
+      </ArticlesWrapper>
+    </>
+  );
+};
 
 export const query = graphql`
   {
-    allMdx {
+    allDatoCmsArticle {
       nodes {
-        frontmatter {
-          title
-          slug
-          author
-          featuredImage {
-            childImageSharp {
-              fluid(maxWidth: 700, maxHeight: 500) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
-            }
+        title
+        featuredImage {
+          fluid(maxWidth: 500) {
+            ...GatsbyDatoCmsFluid_tracedSVG
           }
         }
-        excerpt(pruneLength: 50)
       }
     }
   }
