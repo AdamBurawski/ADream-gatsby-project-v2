@@ -4,8 +4,8 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { graphql } from "gatsby";
 
 export const query = graphql`
-  query MyQuery {
-    datoCmsArticle {
+  query querySingleArticle($id: String!) {
+    datoCmsArticle(id: { eq: $id }) {
       title
       featuredImage {
         fixed(width: 500) {
