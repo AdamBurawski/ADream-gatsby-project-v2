@@ -16,6 +16,7 @@ import PageInfo from "../components/PageInfo";
 import styled from "styled-components";
 import ArticlesPage from "../pages/articles";
 import slugify from "slugify";
+import ContactForm from "../components/contact";
 
 const ArticlesWrapper = styled.div`
   display: grid;
@@ -61,8 +62,8 @@ const IndexPage = ({ data }) => {
         <div>
           <BgCarousel />
         </div>
-
-        <form
+        <ContactForm />
+        {/* <form
           className="form"
           name="contact-form"
           method="post"
@@ -86,7 +87,7 @@ const IndexPage = ({ data }) => {
             </label>
           </div>
           <button>Wyślij</button>
-        </form>
+        </form> */}
         {/* <button className="btn1">←</button>
       <button className="btn2">→</button> */}
         {/* <input type="range" value="2" min="0" max="3" id="galleryInput"></input> */}
