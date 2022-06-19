@@ -17,6 +17,7 @@ import styled from "styled-components";
 import ArticlesPage from "../pages/articles";
 import slugify from "slugify";
 import ContactForm from "../components/contact";
+// import BgGallery from "../components/bgGallery";
 
 const ArticlesWrapper = styled.div`
   display: grid;
@@ -63,34 +64,6 @@ const IndexPage = ({ data }) => {
           <BgCarousel />
         </div>
         <ContactForm />
-        {/* <form
-          className="form"
-          name="contact-form"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-          <span>Lorem ipsum Lorem ipsum lorem ipsum</span>
-          <span>consectetur adipiscing elit. Ut auctor arcu</span>
-          <span>Zostaw kontakt, zadzwonimy do Ciebie</span>
-          <input name="name" type="text" placeholder="Imię i nazwisko" />
-          <input name="phone" type="phone" placeholder="Telefon" />
-          <input name="email" type="email" placeholder="Email" />
-          <textarea name="message" id="" cols="30" rows="10">
-            Lorem ipsum lorem ipsum
-          </textarea>
-          <div className="checkBoxWrapper">
-            <label>
-              <input className="check" name="check" type="checkbox"></input>
-              Wyrażam dobrowolną zgodę n przetwarzanie moich danych osobowych
-              więcej...
-            </label>
-          </div>
-          <button>Wyślij</button>
-        </form> */}
-        {/* <button className="btn1">←</button>
-      <button className="btn2">→</button> */}
-        {/* <input type="range" value="2" min="0" max="3" id="galleryInput"></input> */}
       </div>
       <section className="offer">
         <div className="office1">
