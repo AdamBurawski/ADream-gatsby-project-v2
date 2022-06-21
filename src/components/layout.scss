@@ -92,7 +92,7 @@ $fontColor: black;
     // padding: 80px 65px 0;
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
-    background-color: lightgray;
+    // background-color: lightgray;
   }
 
   .navStyles,
@@ -138,7 +138,7 @@ $fontColor: black;
 
   .menuIcon {
     position: absolute;
-    right: 20%;
+    right: 10%;
     top: 24%;
     padding: 0 5px 5px;
     display: none;
@@ -574,18 +574,18 @@ $fontColor: black;
   .ownOffice {
     margin: 45px 175px 0 175px;
     min-height: 70vh;
-    width: 1565px;
+    // width: 1565px;
     // margin-left: 150px;
     position: static;
     // left: calc(100% - 1565px);
-    left: 160px;
+    // left: 160px;
     // top: 134px;
     right: 0;
     background-image: url(../images/OwnOffice/image.webp);
     background-repeat: no-repeat;
     .wrapper {
       position: relative;
-      left: 160px;
+      // left: 160px;
       min-height: 70vh;
       // top: 134px;
       h1 {
@@ -648,6 +648,8 @@ $fontColor: black;
     // display: flex;
     // flex-direction: column;
     // justify-content: space-evenly;
+    width: 100vw;
+    overflow-x: hidden;
 
     .wrapper {
       position: relative;
@@ -1077,16 +1079,18 @@ $fontColor: black;
 
       ul {
         flex-direction: column;
+        align-items: flex-end;
         justify-content: center;
-        align-items: center;
         position: absolute;
-        top: 20vh;
-        right: 10%;
+        top: 60%;
+        right: -6%;
         // transform: translateY(-50%);
         padding-right: 10%;
         line-height: 70px;
-        background-color: lightsalmon;
+        background-color: black;
+        opacity: 0.85;
         width: 100vw;
+        height: 100vh;
         // height: 100vw;
         z-index: 1000;
         // left: -20vw;
@@ -1316,25 +1320,55 @@ $fontColor: black;
   .navStyles nav ul li {
     font-size: 22px;
   }
-  .contentWrapper .form {
-    max-width: 100vw;
-    top: 100vh;
-    // left: 0;
-  }
 
   .offer {
-    margin-top: 60vh;
+    margin-top: 111vh;
     .office2 {
       height: 495px;
     }
   }
 
-  // .news h1 {
-  //   margin-top: 100vh;
-  // }
-
   .news .container .wrapper button {
     width: 100%;
+  }
+  .gallery {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .contentWrapper {
+    h1 {
+      top: 150px;
+      font-size: 45px;
+    }
+    h2 {
+      top: 150px;
+      font-size: 14px;
+      width: 82%;
+    }
+    .btn2,
+    .btn1 {
+      left: unset;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      font-size: 30px;
+      bottom: -1px;
+    }
+    .btn1 {
+      left: 0;
+      right: unset;
+    }
+    .progressWrapper {
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .form {
+    border-top: 1px solid lightgray;
+    width: 100vw;
+    top: 100vh;
   }
 }
 
@@ -1342,7 +1376,7 @@ $fontColor: black;
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   .navStyles {
     display: flex;
-    width: 100%;
+    width: 85vw;
     align-items: center;
     justify-content: flex-start;
     font-family: "Poppins";
@@ -1415,6 +1449,8 @@ $fontColor: black;
     filter: brightness(85%);
     opacity: 0.9;
     // animation: lazyLoading2 0.7s;
+    width: 100vw;
+    object-fit: cover;
   }
 
   // .features {
