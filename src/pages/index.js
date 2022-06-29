@@ -189,24 +189,6 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </section>
-      <section className="footer">
-        <div className="boxFooter"></div>
-        <ul>
-          <li>
-            <span className="logo">
-              <Link to="/">LOGO</Link>
-            </span>
-          </li>
-          <li>lorem ipsum</li>
-          <li>lorem ipsum</li>
-          <li>lorem ipsum</li>
-          <li>lorem ipsum</li>
-          <li>lorem ipsum</li>
-          <li>lorem ipsum</li>
-          <li>lorem ipsum</li>
-          <li>lorem ipsum</li>
-        </ul>
-      </section>
     </Layout>
   );
 };

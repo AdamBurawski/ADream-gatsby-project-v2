@@ -20,7 +20,7 @@ const Nav2 = () => (
         <Link to="/wlasne-biuro">Własne biuro</Link>
       </li>
       <li>
-        <Link to="/kontakt">Kontakt</Link>
+        <Link to="/contact">Kontakt</Link>
       </li>
     </ul>
   </nav>

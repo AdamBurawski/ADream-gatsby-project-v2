@@ -4,10 +4,16 @@ import { graphql } from "gatsby";
 import ArticlePreview from "../components/ArticlePreview";
 import PageInfo from "../components/PageInfo";
 import slugify from "slugify";
+import Layout from "../components/layout";
+
+const LayoutWrapper = styled.div`
+  // height: 50vh;
+  padding: 0;
+`;
 
 const ArticlesWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 50px;
 `;
 
@@ -22,17 +28,21 @@ const ArticlesPage = ({ data }) => {
   } = data;
   return (
     <>
-      <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
-      <ArticlesWrapper>
-        {nodes.map(({ title, featuredImage }) => (
-          <ArticlePreview
-            key={title}
-            title={title}
-            image={featuredImage.fluid}
-            slug={slugify(title, { lower: true })}
-          />
-        ))}
-      </ArticlesWrapper>
+      <LayoutWrapper className="newsPage">
+        <Layout>
+          <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
+          <ArticlesWrapper>
+            {nodes.map(({ title, featuredImage }) => (
+              <ArticlePreview
+                key={title}
+                title={title}
+                image={featuredImage.fluid}
+                slug={slugify(title, { lower: true })}
+              />
+            ))}
+          </ArticlesWrapper>
+        </Layout>
+      </LayoutWrapper>
     </>
   );
 };

@@ -6,7 +6,7 @@ const ContactForm = () => (
   <div>
     <Formik
       initialValues={{ name: "", phone: "", email: "", message: "" }}
-      onSubmit={(values, { setSubmitting }) => {
+      onSubmit={(values, { setSubmitting, resetForm }) => {
         axios
           .post(
             "https://us-central1-adream-gatsby-project-form.cloudfunctions.net/sendEmail",
@@ -20,6 +20,7 @@ const ContactForm = () => (
             console.log(err);
             setSubmitting(false);
           });
+        resetForm({ values: "" });
       }}
     >
       {({

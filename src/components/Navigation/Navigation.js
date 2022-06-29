@@ -25,19 +25,34 @@ class MenuMobile extends React.Component {
       <nav>
         <ul>
           <li>
-            <Link to="/poznaj-przestrzen">Poznaj przestrzeń</Link>
+            <Link to="/" onClick={this.handleClick}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/oferta">Oferta</Link>
+            <Link to="/poznaj-przestrzen" onClick={this.handleClick}>
+              Poznaj przestrzeń
+            </Link>
           </li>
           <li>
-            <Link to="/articles">Aktualności</Link>
+            <Link to="/oferta" onClick={this.handleClick}>
+              Oferta
+            </Link>
+          </li>
+          <li>
+            <Link to="/articles" onClick={this.handleClick}>
+              Aktualności
+            </Link>
           </li>
           <li className="wlasneBiuro">
-            <Link to="/wlasne-biuro">Własne biuro</Link>
+            <Link to="/wlasne-biuro" onClick={this.handleClick}>
+              Własne biuro
+            </Link>
           </li>
           <li>
-            <Link to="/kontakt">Kontakt</Link>
+            <Link to="/contact" onClick={this.handleClick}>
+              Kontakt
+            </Link>
           </li>
         </ul>
       </nav>
