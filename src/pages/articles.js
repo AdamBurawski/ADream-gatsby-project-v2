@@ -8,13 +8,14 @@ import Layout from "../components/layout";
 
 const LayoutWrapper = styled.div`
   // height: 50vh;
-  padding: 0;
 `;
 
 const ArticlesWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
+  margin-bottom: 100px;
+  padding: 80px 50px 0;
 `;
 
 const pageData = {
