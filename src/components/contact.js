@@ -80,8 +80,8 @@ const ContactForm = () => (
           <div className="checkBoxWrapper">
             <label>
               <input className="check" name="check" type="checkbox"></input>
-              Wyrażam dobrowolną zgodę n przetwarzanie moich danych osobowych
-              więcej...
+              Wyrażam dobrowolną zgodę na przetwarzanie moich<br></br> danych
+              osobowych
             </label>
           </div>
           <button type="submit" disabled={isSubmitting}>

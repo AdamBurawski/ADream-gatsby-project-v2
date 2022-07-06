@@ -29,8 +29,8 @@ const ArticlesWrapper = styled.div`
 `;
 
 const pageData = {
-  title: "articles",
-  paragraph: `While artists work from real to the abstract, architects must work from the abstract to the real.`,
+  title: "Aktualności",
+  paragraph: `Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...`,
 };
 
 export const query = graphql`
@@ -57,8 +57,8 @@ const IndexPage = ({ data }) => {
       <div className="contentWrapper">
         <h1>Firma </h1>
         <h2>
-          Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,<br></br>{" "}
-          consectetur adipiscing elit. Ut auctor
+          Lorem ipsum dolor sit amet,<br></br> consectetur adipiscing elit. Ut
+          auctor
         </h2>
         <div>
           <BgCarousel />
@@ -165,8 +165,8 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
       <section className="news">
-        {/* <h1>Aktualności</h1> */}
-        <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
+        <h1>Aktualności</h1>
+        {/* <PageInfo title={pageData.title} paragraph={pageData.paragraph} /> */}
         <ArticlesWrapper>
           {nodes.map(({ title, featuredImage }) => (
             <ArticlePreview

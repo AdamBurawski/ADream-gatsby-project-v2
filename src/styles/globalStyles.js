@@ -13,6 +13,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding-top: 80px;
     font-family: 'Montserrat';
+      // padding: 80px 65px 0;
+      font-family: "arial", sans-serif;
+      overflow-x: hidden;
+      // background-color: lightgray;
+
   }
   button {
     padding: 0;

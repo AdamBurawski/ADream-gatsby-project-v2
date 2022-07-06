@@ -8,19 +8,23 @@ import Layout from "../components/layout";
 
 const LayoutWrapper = styled.div`
   // height: 50vh;
+  background-color: lightgray;
+  position: relative;
+  padding: 80px 0 0;
+  margin-top: -80px;
 `;
 
 const ArticlesWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
+  grid-gap: 70px;
   margin-bottom: 100px;
   padding: 80px 50px 0;
 `;
 
 const pageData = {
-  title: "articles",
-  paragraph: `While artists work from real to the abstract, architects must work from the abstract to the real.`,
+  title: "Aktualności",
+  paragraph: `Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...`,
 };
 
 const ArticlesPage = ({ data }) => {

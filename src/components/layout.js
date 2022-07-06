@@ -50,25 +50,83 @@ const Layout = ({ children }) => {
           }
         >
           <section className="footer">
-            <div className="boxFooter"></div>
+            <div className="boxFooter">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
             <ul>
               <li>
                 <span className="logo">
                   <Link to="/">LOGO</Link>
                 </span>
               </li>
-              <li>lorem ipsum1</li>
-              <li>lorem ipsum2</li>
-              <li>lorem ipsum3</li>
-              <li>lorem ipsum4</li>
-              <li>lorem ipsum5</li>
-              <li>lorem ipsum6</li>
-              <li>lorem ipsum7</li>
-              <li>lorem ipsum8</li>
+              <li>
+                {" "}
+                <span style={{ textAlign: "left", display: "inline-block" }}>
+                  ul. Towarowa5/6<br></br>31-000 Kraków
+                </span>
+              </li>
+              <li>
+                <span style={{ textAlign: "left", display: "inline-block" }}>
+                  <strong>+48 999 999 999</strong>
+                  <br></br>
+                  <strong>email@email.com</strong>
+                </span>
+              </li>
+              <li>
+                <Link style={{ textDecoration: "none", color: "white" }} to="/">
+                  Strona główna
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/poznaj-przestrzen"
+                >
+                  Poznaj przestrzeń
+                </Link>
+              </li>
+              <li>
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/wlasne-biuro"
+                >
+                  Własne biuro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/articles"
+                >
+                  Aktualności
+                </Link>
+              </li>
+              <li>
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/oferta"
+                >
+                  Oferta
+                </Link>
+              </li>
+              <li>
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/contact"
+                >
+                  Kontakt
+                </Link>
+              </li>
             </ul>
           </section>
-          © {new Date().getFullYear()}, Product designed by Adam
-          {` `}
+          <div className="designedBy">
+            {" "}
+            © {new Date().getFullYear()}, Product designed by Adam
+            {` `}
+          </div>
         </footer>
       </div>
     </>

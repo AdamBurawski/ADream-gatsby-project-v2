@@ -4,9 +4,13 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const LayoutWrapper = styled.div`
-  height: 60vh;
-  padding: 80px 50px 0;
+  height: 75vh;
+  padding: 160px 50px 0;
   background-color: orange;
+
+  margin-top: -80px;
+  z-index: -1;
+  margin-bottom: -80px;
 `;
 
 const PoznajPrzestrzenPage = () => (

@@ -4,7 +4,7 @@ import Image from "gatsby-image";
 import { Link } from "gatsby";
 
 const PreviewWrapper = styled(Link)`
-  display: black;
+  display: block;
   position: relative;
   width: 100%;
   height: 340px;
