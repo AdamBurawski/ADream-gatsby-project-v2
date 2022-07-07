@@ -17,6 +17,7 @@ const KontaktPage = () => (
     <LayoutWrapper>
       <Seo title="Kontakt" />
       <h2>Kontakt</h2>
+      <h2>telefon</h2>
     </LayoutWrapper>
   </Layout>
 );
