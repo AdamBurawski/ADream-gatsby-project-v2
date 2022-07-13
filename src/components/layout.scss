@@ -211,14 +211,14 @@ $fontColor: black;
   .btn1 {
     @include btnLeft;
     &:active ~ .bgImg {
-      animation: lazyLoading 0.3s;
+      // animation: lazyLoading 0.3s;
     }
   }
 
   .btn2 {
     @include btnRight;
     &:active ~ .bgImg {
-      animation: lazyLoading 0.3s;
+      // animation: lazyLoading 0.3s;
     }
   }
 
