@@ -17,7 +17,7 @@ import styled from "styled-components";
 import ArticlesPage from "../pages/articles";
 import slugify from "slugify";
 import ContactForm from "../components/contact";
-// import BgGallery from "../components/bgGallery";
+import BgGallery from "../components/bgGallery";
 
 const ArticlesWrapper = styled.div`
   display: grid;
@@ -61,7 +61,7 @@ const IndexPage = ({ data }) => {
           auctor
         </h2>
         <div>
-          <BgCarousel />
+          <BgGallery />
         </div>
         <ContactForm />
       </div>

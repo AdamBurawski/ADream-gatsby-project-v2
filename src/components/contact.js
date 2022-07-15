@@ -53,7 +53,7 @@ const ContactForm = () => (
           />
           <input
             name="phone"
-            type="phone"
+            type="tel"
             placeholder="Telefon"
             onChange={handleChange}
             onBlur={handleBlur}
@@ -61,7 +61,7 @@ const ContactForm = () => (
           />
           <input
             name="email"
-            type="e-mail"
+            type="email"
             placeholder="Email"
             onChange={handleChange}
             onBlur={handleBlur}
@@ -70,6 +70,7 @@ const ContactForm = () => (
           <input
             as="textarea"
             name="message"
+            type="text"
             id="message"
             onChange={handleChange}
             onBlur={handleBlur}

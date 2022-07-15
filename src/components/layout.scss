@@ -61,22 +61,22 @@ $fontColor: black;
   }
 }
 
-@keyframes lazyLoading {
-  0% {
-    filter: blur(0);
-    opacity: 1;
-  }
+// @keyframes lazyLoading {
+//   0% {
+//     filter: blur(0);
+//     opacity: 1;
+//   }
 
-  50% {
-    filter: blur(5px);
-    opacity: 0.8;
-  }
+//   50% {
+//     filter: blur(5px);
+//     opacity: 0.8;
+//   }
 
-  100% {
-    filter: blur(0);
-    opacity: 1;
-  }
-}
+//   100% {
+//     filter: blur(0);
+//     opacity: 1;
+//   }
+// }
 // @keyframes lazyLoading2 {
 //   0% {
 //     opacity: 0;
@@ -893,6 +893,16 @@ $fontColor: black;
       li {
         margin-left: 4vw;
       }
+    }
+  }
+
+  .contentWrapper {
+    h1 {
+      top: 240px;
+    }
+    h2 {
+      top: 258px;
+      font-size: 24px;
     }
   }
 

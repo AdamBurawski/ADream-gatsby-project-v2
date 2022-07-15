@@ -1,6 +1,6 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import BgCarousel from "./bgCarousel"
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import BgCarousel from "./bgCarousel";
 
 const BgGallery = () => (
   <StaticQuery
@@ -19,8 +19,10 @@ const BgGallery = () => (
         }
       }
     `}
-    render={data => <BgCarousel bgGalleryImages={data.bgGalleryImages.edges} />}
+    render={(data) => (
+      <BgCarousel bgGalleryImages={data.bgGalleryImages.edges} />
+    )}
   />
-)
+);
 
-export default BgGallery
+export default BgGallery;

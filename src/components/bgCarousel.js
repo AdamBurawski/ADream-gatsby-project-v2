@@ -5,9 +5,9 @@ import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 
 export default class BgCarousel extends Component {
-  //   static propTypes = {
-  //     bgGalleryImages: PropTypes.array.isRequired,
-  //   }
+  static propTypes = {
+    bgGalleryImages: PropTypes.array.isRequired,
+  };
 
   constructor() {
     super();
