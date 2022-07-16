@@ -16,7 +16,7 @@ const OfertaPage = () => (
   <Layout>
     <LayoutWrapper>
       <Seo title="Oferta" />
-      <h2>Oferta</h2>
+      <h2>Oferta test1</h2>
     </LayoutWrapper>
   </Layout>
 );
