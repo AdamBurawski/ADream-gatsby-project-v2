@@ -32,11 +32,6 @@ const ContactForm = () => (
           errors.message = "Uzupełnij treść wiadomości";
         }
         if (!values.check) {
-          // check.handleChange(() => {
-          //   check.checked = false;
-          // });
-          // values.check = true;
-
           errors.check = "Pole wymagane";
         }
         return errors;
