@@ -1,11 +1,46 @@
 import React from "react";
 import { Formik } from "formik";
 import axios from "axios";
+import { check } from "prettier";
 
 const ContactForm = () => (
   <div>
     <Formik
-      initialValues={{ name: "", phone: "", email: "", message: "" }}
+      initialValues={{
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+        check: false,
+      }}
+      validate={(values) => {
+        let errors = {};
+        if (!values.email) {
+          errors.email = "Podaj swój e-mail";
+        } else if (
+          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+        ) {
+          errors.email = "Invalid email address";
+        }
+        if (!values.name) {
+          errors.name = "Podaj swoje imię";
+        }
+        if (!values.phone) {
+          errors.phone = "Podaj swoj nr telefonu";
+        }
+        if (!values.message) {
+          errors.message = "Uzupełnij treść wiadomości";
+        }
+        if (!values.check) {
+          // check.handleChange(() => {
+          //   check.checked = false;
+          // });
+          // values.check = true;
+
+          errors.check = "Pole wymagane";
+        }
+        return errors;
+      }}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         axios
           .post(
@@ -21,10 +56,16 @@ const ContactForm = () => (
             setSubmitting(false);
           });
         resetForm({ values: "" });
+        setTimeout(() => {
+          alert("Twoja wiadomość została wysłana");
+          setSubmitting(false);
+        }, 400);
       }}
     >
       {({
         values,
+        errors,
+        touched,
         handleChange,
         handleBlur,
         handleSubmit,
@@ -51,6 +92,7 @@ const ContactForm = () => (
             onBlur={handleBlur}
             value={values.name}
           />
+          {errors.name && touched.name && errors.name}
           <input
             name="phone"
             type="tel"
@@ -59,6 +101,7 @@ const ContactForm = () => (
             onBlur={handleBlur}
             value={values.phone}
           />
+          {errors.phone && touched.phone && errors.phone}
           <input
             name="email"
             type="email"
@@ -67,6 +110,7 @@ const ContactForm = () => (
             onBlur={handleBlur}
             value={values.email}
           />
+          {errors.email && touched.email && errors.email}
           <input
             as="textarea"
             name="message"
@@ -77,13 +121,21 @@ const ContactForm = () => (
             value={values.message}
             placeholder=" Lorem ipsum lorem ipsum"
           />
+          {errors.message && touched.message && errors.message}
 
           <div className="checkBoxWrapper">
             <label>
-              <input className="check" name="check" type="checkbox"></input>
+              <input
+                className="check"
+                name="check"
+                type="checkbox"
+                onChange={handleChange}
+                checked={values.check}
+              ></input>
               Wyrażam dobrowolną zgodę na przetwarzanie moich<br></br> danych
               osobowych
             </label>
+            {errors.check && touched.check && errors.check}
           </div>
           <button type="submit" disabled={isSubmitting}>
             Wyślij
